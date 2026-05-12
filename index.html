@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Axon GHIMS Monitor - Copyright & Legal</title>
-    <!-- Axon GHIMS Monitor Legal Page | Axon Information Systems -->
+    <title>Axon GHIMS Monitor - Field Training Management for Ghana Health</title>
+    <!-- Axon GHIMS Monitor Marketing Page | Axon Information Systems -->
     <style>
         * {
             margin: 0;
@@ -14,113 +14,351 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.8;
+            line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
+            background: white;
         }
 
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 2rem 1rem;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 0;
+            position: relative;
+            overflow: hidden;
         }
 
-        header h1 {
+        .hero {
+            position: relative;
+            z-index: 1;
+            padding: 5rem 1.5rem 4rem;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.4);
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.35rem 1rem;
+            border-radius: 50px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 6vw, 3.8rem);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero h1 span {
+            display: block;
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            font-weight: 400;
+            opacity: 0.85;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 0.4rem;
+        }
+
+        .hero-tagline {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.65;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .hero-feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .hero-feature-item .icon {
+            font-size: 1.2rem;
+        }
+
+        /* Background blobs */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 320px;
+            height: 320px;
+            background: rgba(255,255,255,0.07);
+            border-radius: 50%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -60px;
+            width: 260px;
+            height: 260px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .hero > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Animated counter */
+        .stat-item h3 {
+            color: white;
             font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.95;
+            margin: 0;
+            min-width: 100px;
         }
 
         .container {
-            max-width: 900px;
-            margin: 2rem auto;
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 0 1rem;
         }
 
-        .content {
-            background: white;
-            border-radius: 8px;
-            padding: 2.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2rem;
+        section {
+            padding: 3rem 1rem;
+            margin: 2rem auto;
         }
 
         h2 {
-            color: #667eea;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            font-size: 1.6rem;
-            border-bottom: 2px solid #667eea;
-            padding-bottom: 0.5rem;
+            /* color: #667eea; */
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
         }
 
         h3 {
             color: #764ba2;
+            font-size: 1.3rem;
             margin-top: 1.5rem;
             margin-bottom: 0.75rem;
-            font-size: 1.1rem;
         }
 
-        p {
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem auto;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
             margin-bottom: 1rem;
         }
 
-        ul {
-            margin-left: 2rem;
-            margin-top: 0.75rem;
-            margin-bottom: 1rem;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        .legal-section {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 1.5rem 0;
-            border-left: 4px solid #667eea;
-        }
-
-        .toc {
-            background: #f0f4ff;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-        }
-
-        .toc h3 {
+        .feature-card h3 {
             margin-top: 0;
         }
 
-        .toc ul {
-            list-style: none;
-            margin-left: 0;
+        .benefits-section {
+            background: #f8f9fa;
         }
 
-        .toc a {
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem auto;
+        }
+
+        .benefit-item {
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .benefit-item strong {
             color: #667eea;
+            font-size: 1.1rem;
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem auto;
+        }
+
+        .stat-item h3 {
+            color: white;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .stat-item p {
+            margin: 0.5rem 0 0 0;
+            opacity: 0.95;
+        }
+
+        .download-section {
+            background: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        .download-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
             text-decoration: none;
-            transition: color 0.3s;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin: 0 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
         }
 
-        .toc a:hover {
-            color: #764ba2;
+        .download-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
         }
 
-        .highlight {
-            background: #fff8e1;
-            padding: 0.2rem 0.4rem;
-            border-radius: 3px;
-            color: #ff6f00;
+        /* Feature tabs */
+        .tab-nav {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 0.6rem 1.4rem;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .tab-btn.active, .tab-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .tab-panel {
+            display: none;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        .feature-detail {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 1rem;
+        }
+
+        .feature-detail h3 {
+            color: #667eea;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-detail ul {
+            margin-left: 1.5rem;
+        }
+
+        .feature-detail li {
+            margin-bottom: 0.6rem;
+        }
+
+        .badge-coming-soon {
+            display: inline-block;
+            background: #ffc107;
+            color: #333;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+
+        .demo-video {
+            margin: 2rem 0;
+            text-align: center;
         }
 
         footer {
@@ -128,7 +366,6 @@
             color: white;
             text-align: center;
             padding: 2rem 1rem;
-            margin-top: 3rem;
         }
 
         footer p {
@@ -136,238 +373,260 @@
             opacity: 0.9;
         }
 
-        .nav-links {
-            display: none;
+        .footer-nav {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0.75rem 0 0.25rem;
         }
 
-        .last-updated {
-            color: #666;
-            font-size: 0.95rem;
-            font-style: italic;
-            text-align: center;
-            margin-top: 2rem;
-            padding-top: 1rem;
-            border-top: 1px solid #ddd;
+        .footer-nav a {
+            text-decoration: none;
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 999px;
+            padding: 0.5rem 0.9rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .footer-nav a:hover {
+            color: #333;
+            background: white;
+            border-color: white;
+        }
+
+        ul {
+            margin-left: 2rem;
+            margin-top: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Axon GHIMS Monitor</h1>
-        <p>Copyright & Legal Information</p>
+        <div class="hero">
+            <div class="hero-badge">Now available on the App Store</div>
+            <h1>
+                <span>Axon</span>
+                GHIMS Monitor
+            </h1>
+            <p class="hero-tagline">The dedicated shift and task management app for Ghana's Health Information Management System field trainers. Built for the field, built for Ghana.</p>
+            <div class="hero-actions">
+                <a href="#download" class="cta-button">&#8659;&nbsp; Download on App Store</a>
+                <a href="#features" class="cta-button" style="background: transparent; color: white; border: 2px solid rgba(255,255,255,0.7);">See Features</a>
+            </div>
+            <div class="hero-features">
+                <div class="hero-feature-item"><span class="icon">&#128205;</span> GPS Clock-In/Out</div>
+                <div class="hero-feature-item"><span class="icon">&#9989;</span> Task Management</div>
+                <div class="hero-feature-item"><span class="icon">&#128225;</span> Offline-First</div>
+                <div class="hero-feature-item"><span class="icon">&#128274;</span> Secure & Encrypted</div>
+            </div>
+        </div>
     </header>
 
-    <div class="container">
-        <div class="nav-links">
-            <a href="marketing.html">← Marketing</a>
-            <a href="support.html">Support →</a>
+    <section class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+        <h2>Empower Your Field Teams</h2>
+        <p style="text-align: center; font-size: 1.1rem; max-width: 720px; margin: 0 auto;">Axon GHIMS Monitor is the dedicated mobile app for field trainers in Ghana's Health Information Management System. Log shifts with GPS verification, manage assigned tasks, and stay in sync with your team &mdash; even without an internet connection.</p>
+    </section>
+
+    <section class="container" id="features">
+        <h2>Core Features</h2>
+        <div class="tab-nav">
+            <button class="tab-btn active" onclick="showTab('shifts', this)">Shifts</button>
+            <button class="tab-btn" onclick="showTab('tasks', this)">Tasks</button>
+            <button class="tab-btn" onclick="showTab('offline', this)">Offline Sync</button>
+            <button class="tab-btn" onclick="showTab('upcoming', this)">Coming Soon</button>
         </div>
 
-        <div class="content">
-            <div class="toc">
-                <h3>Quick Navigation</h3>
+        <div id="tab-shifts" class="tab-panel active">
+            <div class="feature-detail">
+                <h3>&#128338; Shift Management & GPS Clock-In/Out</h3>
+                <p>Accurately record working hours at your assigned facility with location-verified clock-ins and automatic shift approvals.</p>
                 <ul>
-                    <li><a href="#copyright">Copyright Notice</a></li>
-                    <li><a href="#license">License & Usage</a></li>
-                    <li><a href="#terms">Terms of Service</a></li>
-                    <li><a href="#privacy">Privacy Policy</a></li>
-                    <li><a href="#disclaimers">Disclaimers</a></li>
-                    <li><a href="#contact">Contact Information</a></li>
+                    <li>Clock in and out using GPS &mdash; verified within 100 metres of your facility</li>
+                    <li>Shift records captured with precise timestamps and GPS coordinates</li>
+                    <li>Automatic clock-out if you leave the facility without logging out</li>
+                    <li>Shifts sent to your Team Lead for approval after clock-out</li>
+                    <li>Receive notifications on approval or rejection with reviewer notes</li>
+                    <li>View full shift history including total work time and break minutes</li>
                 </ul>
-            </div>
-
-            <h2 id="copyright">Copyright Notice</h2>
-
-            <p><span class="highlight">&copy; 2026 Axon Information Systems Limited. All rights reserved.</span></p>
-
-            <p>GHIMS Monitor and all associated content, features, and functionality (including but not limited to all information, software, text, displays, images, video, and audio) are owned by Axon Information Systems Limited, its licensors, or other providers of such material and are protected by international copyright laws.</p>
-
-            <p>The compilation, arrangement, and assembly of all content on GHIMS Monitor, as well as all software used to generate such content, is the exclusive property of Axon Information Systems Limited and protected by international copyright laws.</p>
-
-            <div class="legal-section">
-                <strong>Registered Trademarks:</strong>
-                <ul>
-                    <li>Axon GHIMS Monitor&trade;</li>
-                    <li>Axon Information Systems&trade;</li>
-                </ul>
-            </div>
-
-            <h2 id="license">License & Usage Rights</h2>
-
-            <h3>Limited License</h3>
-            <p>Axon Information Systems Limited grants you a limited, non-exclusive, non-transferable license to download and install the GHIMS Monitor application on your personal iOS device and to use it in accordance with the terms and conditions of this agreement, provided that you keep intact all copyright, trademark, and other proprietary notices.</p>
-
-            <h3>Restrictions</h3>
-            <p>You may not:</p>
-            <ul>
-                <li>Reproduce, duplicate, copy, sell, or resell the app or any of its contents</li>
-                <li>Modify, reverse-engineer, decompile, or attempt to derive the source code</li>
-                <li>Remove or obscure any proprietary notices or labels</li>
-                <li>Use the app for any commercial purpose without prior written consent</li>
-                <li>Share your login credentials or allow unauthorized access to your account</li>
-                <li>Transmit viruses, malware, or any code of destructive nature</li>
-                <li>Use automated systems or bots to access the application</li>
-            </ul>
-
-            <h2 id="terms">Terms of Service</h2>
-
-            <h3>User Responsibilities</h3>
-            <p>As a user of GHIMS Monitor, you are responsible for:</p>
-            <ul>
-                <li>Maintaining the confidentiality of your login credentials</li>
-                <li>Notifying Axon Ghana immediately of any unauthorized use of your account</li>
-                <li>Ensuring your device meets minimum system requirements</li>
-                <li>Keeping your device software and operating system updated</li>
-                <li>Maintaining an active internet connection for synchronization</li>
-            </ul>
-
-            <h3>Acceptable Use Policy</h3>
-            <p>You agree not to use GHIMS Monitor to:</p>
-            <ul>
-                <li>Violate any applicable laws or regulations</li>
-                <li>Harass, threaten, defame, or abuse any individual or entity</li>
-                <li>Submit false or misleading information</li>
-                <li>Interfere with the operation of the application or its servers</li>
-                <li>Attempt unauthorized access to protected areas or data</li>
-            </ul>
-
-            <h2 id="privacy">Privacy Policy</h2>
-
-            <h3>Data Collection</h3>
-            <p>GHIMS Monitor collects the following types of information:</p>
-            <ul>
-                <li><strong>Account Information:</strong> Phone number, password, name, and assignment details</li>
-                <li><strong>Location Data:</strong> GPS coordinates for clock-in/out verification and facility tracking</li>
-                <li><strong>Activity Data:</strong> Shift records, incident reports, and progress tracking information</li>
-                <li><strong>Device Information:</strong> Device model, OS version, and app version</li>
-            </ul>
-
-            <h3>Data Usage</h3>
-            <p>Collected data is used solely for:</p>
-            <ul>
-                <li>Authenticating users and maintaining secure accounts</li>
-                <li>Providing app functionality and features</li>
-                <li>Synchronizing data across devices</li>
-                <li>Improving application performance and security</li>
-                <li>Complying with legal and regulatory requirements</li>
-            </ul>
-
-            <h3>Data Protection</h3>
-            <p>Your data is protected through:</p>
-            <ul>
-                <li>Firebase authentication with industry-standard encryption</li>
-                <li>HTTPS/TLS protocols for data transmission</li>
-                <li>Regular security audits and updates</li>
-                <li>Access controls limiting data to authorized personnel</li>
-                <li>Compliance with GDPR and local data protection regulations</li>
-            </ul>
-
-            <h3>Data Retention</h3>
-            <p>Data is retained as follows:</p>
-            <ul>
-                <li><strong>Active User Data:</strong> Retained for the duration of employment and 30 days after account closure</li>
-                <li><strong>Incident Reports:</strong> Retained for compliance and audit purposes per organizational policy</li>
-                <li><strong>Location Data:</strong> Retained for 6 months for audit trails</li>
-            </ul>
-
-            <h3>Third-Party Access</h3>
-            <p>Your data will not be shared with third parties except:</p>
-            <ul>
-                <li>With proper authorization from your organization</li>
-                <li>When required by law or legal process</li>
-                <li>To service providers who agree to maintain confidentiality</li>
-            </ul>
-
-            <div class="legal-section">
-                <strong>Data Subject Rights:</strong>
-                <p>You have the right to access, correct, or delete your personal data. Submit requests to privacy@axoninfosystems.com</p>
-            </div>
-
-            <h2 id="disclaimers">Disclaimers</h2>
-
-            <h3>Limitation of Liability</h3>
-            <p>GHIMS Monitor is provided "AS IS" without warranty of any kind, express or implied. Axon Information Systems Limited shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the application.</p>
-
-            <h3>GPS Accuracy Disclaimer</h3>
-            <p>GPS location data may be affected by environmental factors, signal strength, and device limitations. Axon Ghana Limited does not guarantee absolute accuracy of location-based features. Always verify critical location data through alternative means if necessary.</p>
-
-            <h3>Data Loss Disclaimer</h3>
-            <p>While GHIMS Monitor implements offline-first architecture, Axon Ghana Limited recommends maintaining regular backups of critical data. We are not liable for data loss resulting from device failure, network issues, or user error.</p>
-
-            <h3>Service Interruption</h3>
-            <p>Axon Information Systems Limited does not guarantee uninterrupted access to GHIMS Monitor. We reserve the right to perform maintenance, updates, or service modifications without notice.</p>
-
-            <h3>Third-Party Services</h3>
-            <p>GHIMS Monitor uses Firebase services. Your use is subject to Google's Terms of Service and Privacy Policy. Axon Ghana Limited is not responsible for third-party service availability or policies.</p>
-
-            <h2 id="contact">Contact Information</h2>
-
-            <div class="legal-section">
-                <strong>Legal Inquiries:</strong>
-                <p>Email: legal@axoninfosystems.com</p>
-                <p>Address: Accra, Ghana</p>
-                <p>Phone: +233 (0) XXX XXXX XXX</p>
-            </div>
-
-            <div class="legal-section">
-                <strong>Privacy Concerns:</strong>
-                <p>Email: privacy@axoninfosystems.com</p>
-                <p>Response Time: Within 7 business days</p>
-            </div>
-
-            <div class="legal-section">
-                <strong>Copyright Infringement Claims:</strong>
-                <p>To report copyright infringement, contact: copyright@axoninfosystems.com</p>
-                <p>Include specific details of the infringing content and documentation of your copyright claim.</p>
-            </div>
-
-            <h2>Modifications to Terms</h2>
-            <p>Axon Ghana Limited reserves the right to modify these legal terms and policies at any time. Changes will be effective immediately upon posting to the app or website. Continued use of GHIMS Monitor after changes constitutes acceptance of the modified terms.</p>
-
-            <h2>Severability</h2>
-            <p>If any provision of these terms is found to be invalid or unenforceable, that provision shall be severed, and the remaining provisions shall remain in full force and effect.</p>
-
-            <h2>Governing Law</h2>
-            <p>These terms and policies are governed by and construed in accordance with the laws of the Republic of Ghana, without regard to its conflict of laws principles.</p>
-
-            <div class="last-updated">
-                <p>Last Updated: May 2026</p>
-                <p>Version 1.0</p>
             </div>
         </div>
-    </div>
+
+        <div id="tab-tasks" class="tab-panel">
+            <div class="feature-detail">
+                <h3>&#9989; Task Management & Delegation</h3>
+                <p>Stay on top of your responsibilities and, if you are a Team Lead, manage and delegate work to your team.</p>
+                <ul>
+                    <li>View all tasks assigned to you in one place</li>
+                    <li>Filter by status: Assigned, Delegated, Completed, Submitted, Cancelled</li>
+                    <li>Set task priorities: Low, Medium, High, or Critical</li>
+                    <li>Submit task completion reports directly from the app</li>
+                    <li><strong>Team Leads:</strong> Create, delegate, and track tasks across the team</li>
+                    <li>Track deadlines and see who completed what</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab-offline" class="tab-panel">
+            <div class="feature-detail">
+                <h3>&#128225; Offline-First Architecture</h3>
+                <p>GHIMS Monitor is built to work in low-connectivity environments common in Ghana's field deployments.</p>
+                <ul>
+                    <li>All operations (clock-in, clock-out, task updates) saved locally when offline</li>
+                    <li>Automatic background sync when internet connectivity is restored</li>
+                    <li>No data is ever lost due to poor or absent network coverage</li>
+                    <li>Pending operations queue managed transparently in the background</li>
+                    <li>Connectivity status visible at a glance within the app</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab-upcoming" class="tab-panel">
+            <div class="feature-detail">
+                <h3>&#128336; Coming Soon</h3>
+                <p>More features are actively being developed to extend GHIMS Monitor's capabilities.</p>
+                <ul>
+                    <li><strong>Incident Reporting</strong> <span class="badge-coming-soon">Upcoming</span> &mdash; Log and track field incidents with photo attachments</li>
+                    <li><strong>Facility Progress Tracking</strong> <span class="badge-coming-soon">Upcoming</span> &mdash; Monitor training progress by department and checklist</li>
+                    <li><strong>Daily Reports</strong> <span class="badge-coming-soon">Upcoming</span> &mdash; Submit and manage daily facility reports with file attachments</li>
+                    <li><strong>Home Dashboard</strong> <span class="badge-coming-soon">Upcoming</span> &mdash; Overview screen with key metrics and quick actions</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits-section">
+        <div class="container">
+            <h2>Why Choose GHIMS Monitor?</h2>
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <strong>&#10003; GPS-Verified Accountability</strong>
+                    <p>Every clock-in and clock-out is location-verified within 100 metres of the assigned facility, ensuring accurate attendance records.</p>
+                </div>
+
+                <div class="benefit-item">
+                    <strong>&#10003; Zero Data Loss</strong>
+                    <p>Offline-first architecture ensures shifts and task updates are never lost, even in areas with no cellular coverage.</p>
+                </div>
+
+                <div class="benefit-item">
+                    <strong>&#10003; Automated Workflows</strong>
+                    <p>Automatic clock-out detection, shift approval notifications, and background sync reduce manual overhead.</p>
+                </div>
+
+                <div class="benefit-item">
+                    <strong>&#10003; Team Lead Controls</strong>
+                    <p>Team Leads can approve shifts, delegate tasks, and track team progress from a single app.</p>
+                </div>
+
+                <div class="benefit-item">
+                    <strong>&#10003; Ghana-Optimised</strong>
+                    <p>Built for Ghana's healthcare networks &mdash; supports local phone number formats and works on Ghanaian mobile data conditions.</p>
+                </div>
+
+                <div class="benefit-item">
+                    <strong>&#10003; Secure Access</strong>
+                    <p>Firebase-backed authentication with role-based access ensures only authorised personnel can view or submit data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="stats-section">
+        <div class="container">
+            <h2 style="color: white;">By the Numbers</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3 data-target="100">0</h3>
+                    <p>Metres proximity radius</p>
+                </div>
+                <div class="stat-item">
+                    <h3 data-target="0" data-suffix=" lost">0 lost</h3>
+                    <p>Records lost offline</p>
+                </div>
+                <div class="stat-item">
+                    <h3 data-target="2">0</h3>
+                    <p>Active feature modules</p>
+                </div>
+                <div class="stat-item">
+                    <h3 data-target="4">0</h3>
+                    <p>Modules in development</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="stats-section">
+        <div class="container">
+            <h2>Get GHIMS Monitor</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">Available now on iOS. Requires location services and an authorised GHIMS account.</p>
+            <div id="download">
+                <a href="https://apps.apple.com" class="download-button">&#8659; Download on the App Store</a>
+            </div>
+            <p style="margin-top: 1.5rem; font-size: 0.9rem; color: #ffffff;">iOS 12.0 or later &nbsp;&bull;&nbsp; Location services required &nbsp;&bull;&nbsp; 50 MB minimum storage</p>
+        </div>
+    </section>
 
     <footer>
+        <div class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="support.html">Support</a>
+            <a href="copyright.html">Copyright</a>
+        </div>
         <p>&copy; 2026 Axon Information Systems. All rights reserved.</p>
         <p>Axon GHIMS Monitor &mdash; Field Training Management System</p>
-        <p>For questions, contact: legal@axoninfosystems.com</p>
     </footer>
 
     <script>
-        // Back to top button
-        const backBtn = document.createElement('button');
-        backBtn.textContent = '\u2B06';
-        backBtn.title = 'Back to top';
-        backBtn.style.cssText = 'display:none;position:fixed;bottom:2rem;right:2rem;background:#667eea;color:white;border:none;border-radius:50%;width:46px;height:46px;font-size:1.3rem;cursor:pointer;box-shadow:0 4px 12px rgba(102,126,234,0.5);';
-        backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-        document.body.appendChild(backBtn);
+        // Feature tabs
+        function showTab(id, btn) {
+            document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('tab-' + id).classList.add('active');
+            btn.classList.add('active');
+        }
 
-        window.addEventListener('scroll', () => {
-            backBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
-        });
-
-        // Highlight active TOC link on scroll
-        const headings = document.querySelectorAll('h2[id]');
-        const tocLinks = document.querySelectorAll('.toc a');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            headings.forEach(h => {
-                if (window.scrollY >= h.offsetTop - 80) current = h.id;
+        // Animated counter on scroll
+        function animateCounters() {
+            document.querySelectorAll('.stat-item h3[data-target]').forEach(el => {
+                const target = parseInt(el.dataset.target);
+                if (isNaN(target)) return;
+                let current = 0;
+                const step = Math.ceil(target / 40);
+                const interval = setInterval(() => {
+                    current = Math.min(current + step, target);
+                    el.textContent = current + (el.dataset.suffix || '');
+                    if (current >= target) clearInterval(interval);
+                }, 30);
             });
-            tocLinks.forEach(a => {
-                a.style.fontWeight = a.getAttribute('href') === '#' + current ? '700' : '';
-                a.style.color = a.getAttribute('href') === '#' + current ? '#764ba2' : '';
+        }
+
+        // Trigger counter animation when stats section is visible
+        const statsSection = document.querySelector('.stats-section');
+        let counted = false;
+        const observer = new IntersectionObserver(entries => {
+            if (entries[0].isIntersecting && !counted) {
+                counted = true;
+                animateCounters();
+            }
+        }, { threshold: 0.3 });
+        if (statsSection) observer.observe(statsSection);
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
             });
         });
     </script>

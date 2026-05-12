@@ -221,8 +221,29 @@
             opacity: 0.9;
         }
 
-        .nav-links {
-            display: none;
+        .footer-nav {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0.75rem 0 0.25rem;
+        }
+
+        .footer-nav a {
+            text-decoration: none;
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 999px;
+            padding: 0.5rem 0.9rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .footer-nav a:hover {
+            color: #333;
+            background: white;
+            border-color: white;
         }
 
         .back-to-top {
@@ -259,11 +280,6 @@
     </header>
 
     <div class="container">
-        <div class="nav-links">
-            <a href="marketing.html">← Marketing</a>
-            <a href="copyright.html">Copyright →</a>
-        </div>
-
         <div class="content">
             <h2>Frequently Asked Questions</h2>
             <div id="faq-list">
@@ -433,6 +449,11 @@
     </div>
 
     <footer>
+        <div class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="support.html">Support</a>
+            <a href="copyright.html">Copyright</a>
+        </div>
         <p>&copy; 2026 Axon Information Systems. All rights reserved.</p>
         <p>Axon GHIMS Monitor &mdash; Field Training Management System</p>
     </footer>
